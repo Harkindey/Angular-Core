@@ -1,5 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-
+# Your project is not using the default builders for "test". This means that we cannot add the configured theme to the "test" target.
 # compiled output
 /dist
 /tmp
