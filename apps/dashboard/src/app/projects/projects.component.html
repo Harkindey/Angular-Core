@@ -10,7 +10,7 @@
 			<mat-card-content>
 				<mat-list>
 					<mat-list-item
-						(click)="selectProject($event, project)"
+						(click)="selectProject(project)"
 						*ngFor="let project of projects"
 					>
 						<h3 mat-line>
@@ -35,7 +35,10 @@
 			<mat-card-header>
 				<mat-card-title>
 					<h1>
-						{{ selectedProject?.title }}
+						<span *ngIf="selectedProject; else elseBlock">{{
+							selectedProject.title
+						}}</span>
+						<ng-template #elseBlock>Select a Project</ng-template>
 					</h1>
 				</mat-card-title>
 			</mat-card-header>
@@ -45,7 +48,7 @@
 				</mat-card-content>
 				<mat-card-actions>
 					<button type="submit" mat-button color="primary">Save</button>
-					<button type="button" mat-button>Cancel</button>
+					<button type="button" mat-button (click)="cancel()">Cancel</button>
 				</mat-card-actions>
 			</form>
 		</mat-card>
