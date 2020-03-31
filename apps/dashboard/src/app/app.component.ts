@@ -13,7 +13,7 @@ export class AppComponent {
 	links = [
 		{ path: '/', icon: 'home', title: 'Home' },
 		{ path: '/customers', icon: 'face', title: 'Customer' },
-		{ path: '/projects', icon: 'projects', title: 'Projects' }
+		{ path: '/projects', icon: 'work', title: 'Projects' }
 	];
 
 	toggle(sidenav) {

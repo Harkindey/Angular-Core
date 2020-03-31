@@ -18,9 +18,6 @@ import { UiLoginModule } from '@workshop/ui-login';
 		NxModule.forRoot(),
 		BrowserAnimationsModule,
 		MaterialModule,
-		HomeModule,
-		ProjectsModule,
-		CustomersModule,
 		UiLoginModule,
 		AppRoutingModule
 	],
