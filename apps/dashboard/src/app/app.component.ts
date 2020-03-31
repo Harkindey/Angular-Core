@@ -10,6 +10,11 @@ export class AppComponent {
 	// query the DOM, find sidenav and assgn it to localSideNav
 
 	title = 'Angular Core Workshop';
+	links = [
+		{ path: '/', icon: 'home', title: 'Home' },
+		{ path: '/customers', icon: 'face', title: 'Customer' },
+		{ path: '/projects', icon: 'projects', title: 'Projects' }
+	];
 
 	toggle(sidenav) {
 		//or sidenav.toggle()
