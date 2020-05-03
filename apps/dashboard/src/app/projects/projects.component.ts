@@ -30,6 +30,7 @@ export class ProjectsComponent implements OnInit {
 	}
 
 	deleteProjects(project) {
+		console.log(project);
 		this.projectsService
 			.delete(project.id)
 			.subscribe(result => this.getProjects());
@@ -58,6 +59,7 @@ export class ProjectsComponent implements OnInit {
 	}
 
 	selectProject(project) {
+		console.log(project);
 		this.selectedProject = project;
 	}
 
