@@ -8,10 +8,11 @@ import { CustomersComponent } from './customers/customers.component';
 const routes: Routes = [
 	{
 		path: '',
-		loadChildren: () =>
-			import('./home/home.module').then(mod => {
-				return mod.HomeModule;
-			})
+		loadChildren: './home/home.module#HomeModule'
+		//  () =>
+		// import('./home/home.module').then(mod => {
+		// 	return mod.HomeModule;
+		// })
 	},
 	{
 		path: 'projects',
@@ -28,7 +29,7 @@ const routes: Routes = [
 			})
 	},
 	{ path: 'login', component: LoginComponent },
-	{ path: '**', redirectTo: '', pathMatch: 'full' }
+	{ path: '**', redirectTo: '', pathMatch: 'full' } // "" --> root route
 ];
 
 @NgModule({
