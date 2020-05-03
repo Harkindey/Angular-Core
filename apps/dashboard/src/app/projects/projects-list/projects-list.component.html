@@ -1,0 +1,27 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>
+			<h1>Projects</h1>
+		</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<mat-list>
+			<mat-list-item *ngFor="let project of projects">
+				<!-- (click)="selectProject(project)" -->
+
+				<!-- (click)="selectProject($event,project, "Beanne is Good ")" -->
+				<h3 mat-line>
+					{{ project.title }}
+				</h3>
+				<p mat-line>
+					{{ project.details }}
+				</p>
+				<button mat-icon-button *ngIf="!readonly">
+					<!-- (click)="deleteProjects(project); $event.stopImmediatePropagation()" -->
+
+					<mat-icon>close</mat-icon>
+				</button>
+			</mat-list-item>
+		</mat-list>
+	</mat-card-content>
+</mat-card>
